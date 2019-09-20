@@ -75,7 +75,7 @@ function filtrerChainePourBD($str) {
  */
 function obtenirDetailutilisateur($idCnx, $unId) {
     $id = filtrerChainePourBD($unId);
-    $requete = "select id, nom, prenom from utilisateur where id='" . $unId . "'";
+    $requete = "select id, nom, prenom from utilisateur, id_categorie where id='" . $unId . "'";
     $idJeuRes = mysql_query($requete, $idCnx);  
     $ligne = false;     
     if ( $idJeuRes ) {
