@@ -324,7 +324,7 @@ function verifierInfosConnexion($idCnx, $unLogin, $unMdp) {
     $unLogin = filtrerChainePourBD($unLogin);
     $unMdp = filtrerChainePourBD($unMdp);
     // le mot de passe est crypté dans la base avec la fonction de hachage md5
-    $req = "select id, nom, prenom, login, mdp from utilisateur where login='".$unLogin."' and mdp='" . $unMdp . "'";
+    $req = "select id, nom, prenom, login, mdp, id_categorie from utilisateur where login='".$unLogin."' and mdp='" . $unMdp . "'";
     $idJeuRes = mysql_query($req, $idCnx);
     $ligne = false;
     if ( $idJeuRes ) {
