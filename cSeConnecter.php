@@ -68,3 +68,6 @@ session_start();
     require($repInclude . "_pied.inc.html");
     require($repInclude . "_fin.inc.php");
 ?>
+$userconnecter=obtenirIdUserConnecte();
+$recuptype="SELECT type FROM visiteur WHERE 'id'='$userconnecter' ";
+$typerecupérer =@mysql_query($recuptype,$iscomm);
