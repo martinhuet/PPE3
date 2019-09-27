@@ -1,4 +1,5 @@
 <?php  
+session_start();
 /** 
  * Script de contrôle et d'affichage du cas d'utilisation "Se connecter"
  * @package default
@@ -17,7 +18,7 @@
       $lgUser = verifierInfosConnexion($idConnexion, $login, $mdp) ;
       // si l'id utilisateur a été trouvé, donc informations fournies sous forme de tableau
       if ( is_array($lgUser) ) { 
-          affecterInfosConnecte($lgUser["id"], $lgUser["login"], $idCat["id_categorie"]);
+          affecterInfosConnecte($lgUser["id"], $lgUser["login"], $lgUser["id_categorie"]);
       }
       else {
           ajouterErreur($tabErreurs, "Pseudo et/ou mot de passe incorrects");
