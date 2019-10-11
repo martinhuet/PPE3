@@ -39,7 +39,6 @@ function obtenirIdUserConnecte() {
 function affecterInfosConnecte($id, $login) {
     $_SESSION["idUser"] = $id;
     $_SESSION["loginUser"] = $login;
-    $_SESSION["idCategorie"] = $idCat;
 }
 
 /** 
