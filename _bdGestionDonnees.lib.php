@@ -207,7 +207,7 @@ function ajouterFicheFrais($idCnx, $unMois, $unIdVisiteur) {
  * @return string texte de la requête select
  */                                                 
 function obtenirReqMoisFicheFrais($unIdVisiteur) {
-    $req = "select fichefrais.mois as mois from  fichefrais where fichefrais.idvisiteur ='"
+    $req = "select fichefrais.mois as mois from  fichefrais where fichefrais.idVisiteur ='"
             . $unIdVisiteur . "' order by fichefrais.mois desc ";
     return $req ;
 }  
